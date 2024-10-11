@@ -1,4 +1,4 @@
-# ![Daily Coding Challenges](./assets/hero.png)
+# Coding Challenges
 
 ## About
 
