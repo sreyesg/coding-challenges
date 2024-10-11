@@ -92,7 +92,15 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+function sumNumbers (numArr){
+  if(numArr === 0) {return 0}
+  let total = 0
+  numArr.forEach((num)=>{
+    total += num
+  })
+  return total
+}
+console.log(sumNumbers([10]))
 
 
 
