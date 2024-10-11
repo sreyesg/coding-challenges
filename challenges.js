@@ -124,7 +124,14 @@ addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function addList(...numbers){
+  if (numbers === 0) return 0
+  let total = 0
+  numbers.forEach((num) => {
+    total += num
+  })
+  return total
+}
 
 
 
