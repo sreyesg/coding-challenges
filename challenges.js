@@ -127,7 +127,7 @@ addList(7,-12) //=> -5
 function addList(...numbers){
   if (numbers === 0) return 0
   let total = 0
-  numbers.forEach((num) => {
+  numbers.map((num) => {
     total += num
   })
   return total
@@ -158,7 +158,13 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder here:
 
-
+function computeRemainder(dividen,divisor){
+  if(divisor === 0) return Infinity
+  divisionResult = Math.floor(dividen / divisor)
+  residual = dividen - (divisionResult * divisor )
+  return residual
+  
+}
 
 
 
