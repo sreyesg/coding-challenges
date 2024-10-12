@@ -100,8 +100,6 @@ function sumNumbers (numArr){
   })
   return total
 }
-console.log(sumNumbers([10]))
-
 
 
 /*-----------------------------------------------------------------------------
@@ -191,8 +189,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
-
+function range(start, end){
+  
+  if(start > end) return "First argument must be less than second"
+  let arrRange = []
+  for (let i=start; i<end; i++){
+    arrRange.push(i)
+  }
+  return arrRange
+}
+console.log(range(2,8))
 
 
 /*-----------------------------------------------------------------------------
