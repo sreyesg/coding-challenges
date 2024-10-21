@@ -198,7 +198,7 @@ function range(start, end){
   }
   return arrRange
 }
-console.log(range(2,8))
+// console.log(range(2,8))
 
 
 /*-----------------------------------------------------------------------------
@@ -224,7 +224,7 @@ function reverseUpcaseString (string) {
   return strToUpper.split('').reverse().join('')
 }
 
-
+// console.log(reverseUpcaseString("SEI Rocks!"))
 /*-----------------------------------------------------------------------------
 Challenge: 08-removeEnds
 
@@ -244,9 +244,14 @@ removeEnds('a') //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
+function removeEnds(str){
+  if (str.length < 3) return ''
+  let strLength = str.length
+  return str.substring(1, strLength -1 )
+}
 
-
-
+// console.log(removeEnds('SEB Rocks!')) //=> "EB Rocks"
+// console.log(removeEnds('a')) //=> "" (empty string)
 /*-----------------------------------------------------------------------------
 Challenge: 09-charCount
 

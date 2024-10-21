@@ -12,3 +12,4 @@ _config.yml
 .markdownlint.json
 md-validate.js
 run-tests-by-opening-in-browser.html
+whiteBoard.js
