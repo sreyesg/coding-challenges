@@ -290,8 +290,26 @@ charCount('Today is fantastic!')
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
+// find unique values in the string params
+// create object and assigned keys to it programatically
+// filter string params and compare it with created objects key
+
+function charCount (str){
+  const strArr = str.split('')
+  const res = {}
+  strArr.map((letter) => {
+    if(res[letter]){
+      res[letter]++
+    }else {
+      res[letter] = 1
+    }
+  })
+  
 
 
+  return res
+}
+console.log(charCount('hello'))
 
 
 /*-----------------------------------------------------------------------------
