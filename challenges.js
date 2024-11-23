@@ -309,7 +309,8 @@ function charCount (str){
 
   return res
 }
-console.log(charCount('hello'))
+// === Test Function ===
+// console.log(charCount('hello'))
 
 
 /*-----------------------------------------------------------------------------
@@ -337,9 +338,19 @@ formatWithPadding(42, '*', 10) //=> "********42"
 formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
+function formatWithPadding (targetNum, padStr, lengthNum ){
+  // calculate numeric difference between targetNum and lengthNum
+  // create an array with of padStr with the difference value
+  // convert array to string and left attached it to targetNum
+  const difference =  lengthNum - targetNum.toString().length 
+  const newArray = new Array(difference).fill(padStr).join('')
+  const result = `${newArray}${targetNum}`
+  
+  return result
 
-
-
+}
+// === Test function ===
+console.log(formatWithPadding(123,'*',3))
 
 
 /*-----------------------------------------------------------------------------
