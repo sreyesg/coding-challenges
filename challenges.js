@@ -350,7 +350,7 @@ function formatWithPadding (targetNum, padStr, lengthNum ){
 
 }
 // === Test function ===
-console.log(formatWithPadding(123,'*',3))
+// console.log(formatWithPadding(123,'*',3))
 
 
 /*-----------------------------------------------------------------------------
@@ -376,7 +376,17 @@ isPalindrome('A nut for a jar of tuna') //=> true
 isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
-
+function isPalindrome(str){
+  // check string lenght, if length === 0 or 1 return true
+  // reverse string
+  // compare original and reverse and apply boolean login
+  if (str.length === 0 || str.length === 1) {return true}
+  const originalStr = str.toLowerCase().replace(/ /g, '')
+  const reversedStr = str.toLowerCase().replace(/ /g,'').split('').reverse().join('')
+  return originalStr === reversedStr ? true: false
+  
+}
+console.log(isPalindrome('A nut for a jar of tuna'))
 
 
 
