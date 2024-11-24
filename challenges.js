@@ -553,7 +553,7 @@ function mergeObjects (...objects){
   return objectZero
 }
 // Test Function
-console.log(mergeObjects({a: 1, b: 2, c: 3}, {d: 4, f:24, g:'caca'}) )
+// console.log(mergeObjects({a: 1, b: 2, c: 3}, {d: 4, f:24}) )
 
 
 /*-----------------------------------------------------------------------------
@@ -594,7 +594,27 @@ findHighestPriced([
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
+function findHighestPriced (objects){
+  // assing the first object in the array as the objectZero, which will be the sample for comparison
+    // compare objectZero's price with the other's object's price, if there is a greater value, assign that object as object zero
+  // return objectZero
+  let objectZero = objects.shift()
+  
+  objects.map((obj) => {
+    if(obj.price > objectZero.price) objectZero = obj
+  })
+  return objectZero
+}
 
+
+//  Test Function
+console.log(findHighestPriced([
+  { sku: 'a1', price: 125 },
+  { sku: 'b2', price: 235 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+])
+)
 
 
 
