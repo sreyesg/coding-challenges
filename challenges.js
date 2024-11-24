@@ -472,7 +472,7 @@ function mumble (str){
   return result.join('-').replace(/,/g, '')
 }
 
-console.log(mumble('!A 2')) //=> 'a-bb-ccc')
+// console.log(mumble('!A 2')) //=> 'a-bb-ccc')
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
@@ -498,7 +498,20 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ])
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs (arr){
+  // create an empty object
+  // loop over array, and into nested array and use the first idx to declare the key and the second idx to declare the value
+  const resObj = {}
+  for(let i =0; i < arr.length; i++){
+    const [key, value ] = arr[i]
+    resObj[key] = value
+    
+  }
+  return resObj
+}
 
+// Test Function
+console.log(fromPairs([['name', 'Sam'], ['age', 24], ['name', 'Sally']]) )
 
 
 
