@@ -386,7 +386,7 @@ function isPalindrome(str){
   return originalStr === reversedStr ? true: false
   
 }
-console.log(isPalindrome('A nut for a jar of tuna'))
+// console.log(isPalindrome('A nut for a jar of tuna'))
 
 
 
@@ -416,9 +416,24 @@ hammingDistance('!!!!', '****') //=> 4
 hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+function hammingDistance (str1, str2){
+  // if str1 length !== str2 length return Nan
+  // convert strs to arrays
+  // Use for loops to compare the two arrays at the same idx
+  if(str1.length !== str2.length) return NaN
+  const arr1 = str1.split('')
+  const arr2 = str2.split('')
+  let result = 0
+  for(let i=0; i < arr1.length; i++){
+    if(str1[i] !== str2[i]){
+      result++
+    }
+  }
+  return result
+}
 
-
-
+// Test function
+console.log(hammingDistance('abcde', 'a2cd3'))
 
 
 /*-----------------------------------------------------------------------------
