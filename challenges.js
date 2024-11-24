@@ -511,7 +511,7 @@ function fromPairs (arr){
 }
 
 // Test Function
-console.log(fromPairs([['name', 'Sam'], ['age', 24], ['name', 'Sally']]) )
+// console.log(fromPairs([['name', 'Sam'], ['age', 24], ['name', 'Sally']]) )
 
 
 
@@ -542,8 +542,18 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
 
-
-
+function mergeObjects (...objects){
+  const objectZero = objects.shift()
+  
+  objects.map((obj) => {
+    for (const [key,value] of Object.entries(obj)){
+      objectZero[key] = value
+    }
+  })
+  return objectZero
+}
+// Test Function
+console.log(mergeObjects({a: 1, b: 2, c: 3}, {d: 4, f:24, g:'caca'}) )
 
 
 /*-----------------------------------------------------------------------------
