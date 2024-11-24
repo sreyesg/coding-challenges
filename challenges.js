@@ -433,7 +433,7 @@ function hammingDistance (str1, str2){
 }
 
 // Test function
-console.log(hammingDistance('abcde', 'a2cd3'))
+// console.log(hammingDistance('abcde', 'a2cd3'))
 
 
 /*-----------------------------------------------------------------------------
@@ -459,9 +459,20 @@ mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
+function mumble (str){
+  // convert string into array
+  // map over array and create a new arra using idx for its length and element from map to fill it up
+  const arr = str.split('')
+  const result = []
+  arr.map((char, idx) => {
+    let newArr = new Array(idx+1).fill(char)
+    result.push(newArr)
+  })
+  
+  return result.join('-').replace(/,/g, '')
+}
 
-
-
+console.log(mumble('!A 2')) //=> 'a-bb-ccc')
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
