@@ -608,13 +608,13 @@ function findHighestPriced (objects){
 
 
 //  Test Function
-console.log(findHighestPriced([
-  { sku: 'a1', price: 125 },
-  { sku: 'b2', price: 235 },
-  { sku: 'c3', price: 50 },
-  { sku: 'd4', price: 10 }
-])
-)
+// console.log(findHighestPriced([
+//   { sku: 'a1', price: 125 },
+//   { sku: 'b2', price: 235 },
+//   { sku: 'c3', price: 50 },
+//   { sku: 'd4', price: 10 }
+// ])
+// )
 
 
 
@@ -651,6 +651,26 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+// create a new array which length is the param1 lenght.
+// using for loop, loop over param1 array math
+
+function mapArray(array, callback){
+  const responseArr = []
+  for(let i=0; i<array.length; i++){
+    responseArr.push(callback(array[i], i))
+  }
+  return responseArr
+}
+
+
+// Test Function
+console.log(
+  mapArray( [1, 2, 3], function(n) {
+    return n * 2
+  } )
+)
+
+
 
 
 
