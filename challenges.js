@@ -664,11 +664,11 @@ function mapArray(array, callback){
 
 
 // Test Function
-console.log(
-  mapArray( [1, 2, 3], function(n) {
-    return n * 2
-  } )
-)
+// console.log(
+//   mapArray( [1, 2, 3], function(n) {
+//     return n * 2
+//   } )
+// )
 
 
 
@@ -723,9 +723,20 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
 
+const reduceArray = (array, callBack, acc) => {
+  for(let i=0; i<array.length; i++){
+    acc = callBack(acc,array[i], i)
+  }
+  return acc
+}
 
+// Test Function
 
-
+console.log(
+  reduceArray( [1, 2, 3], function(acc, n, i) {
+    return acc + n + i
+  }, 0)
+)
 
 /*-----------------------------------------------------------------------------
 Challenge: 19-flatten
