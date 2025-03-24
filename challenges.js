@@ -777,7 +777,7 @@ function flatten(arr){
   })
   return flattenArr
 } 
-console.log(flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] ))
+// console.log(flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] ))
 
 
 
