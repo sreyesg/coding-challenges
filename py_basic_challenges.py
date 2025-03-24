@@ -39,6 +39,10 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 '''
-
 def add_two_numbers(num1, num2):
-    return num1 + num2 
+    
+    if isinstance(num1, int) and isinstance(num2,int):
+        return num1 + num2
+    else:
+        return "please enter only numbers as parameters"
+    
