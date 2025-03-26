@@ -45,4 +45,37 @@ def add_two_numbers(num1, num2):
         return num1 + num2
     else:
         return "please enter only numbers as parameters"
-    
+
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 03-sumNumbers
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called sumNumbers that accepts a single array of numbers and 
+  returns the sum of the numbers in the array.
+- If the array is empty, return 0 (zero).
+
+Examples:
+
+sumNumbers([10]) //=> 10
+sumNumbers([5, 10]) //=> 15
+sumNumbers([2, 10, -5]) //=> 7
+sumNumbers([]) //=> 0
+-----------------------------------------------------------------------------*/
+// Your solution for 03-sumNumbers here:    
+
+'''
+def sum_numbers(nums):
+    if len(nums) == 0:
+        return 0
+    if len(nums) == 1:
+        return nums[0]
+    result = 0
+    for el in nums:
+        result += el
+    return result
+
+print(sum_numbers([]))
