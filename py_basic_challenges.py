@@ -78,4 +78,68 @@ def sum_numbers(nums):
         result += el
     return result
 
-print(sum_numbers([]))
+# print(sum_numbers([]))
+
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 04-addList
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called addList that accepts any quantity of numbers as 
+  arguments, adds them together, and returns the resulting sum.
+- Assume all parameters will be numbers.
+- If called with no arguments, return 0 (zero).
+
+Examples:
+
+addList(1) //=> 1
+addList(1,50,1.23) //=> 52.23
+addList(7,-12) //=> -5
+-----------------------------------------------------------------------------*/
+// Your solution for 04-addList here:
+
+'''
+def add_list(*args):
+    if len(args) == 0:
+        return 0
+    sum = 0
+    for num in args:
+        sum += num
+    return sum 
+# print(add_list(100,30,23,34,56,1.4))
+
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 05-computeRemainder
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function named computeRemainder that accepts two numeric arguments 
+  and returns the remainder of the division of those two numbers.
+- The first argument should be the dividend, and the second argument should be 
+  the divisor.
+- If a 0 is passed in as the second argument, you should return JavaScript's 
+  special numeric value: Infinity.
+- For extra fun, complete this challenge without using the modulus (%) operator.
+
+Examples:
+
+computeRemainder(10,2) //=> 0
+computeRemainder(4,0) //=> Infinity
+computeRemainder(10.5, 3) //=> 1.5
+-----------------------------------------------------------------------------*/
+// Your solution for 05-computeRemainder here:
+'''
+import math
+def compute_reminder(dividen, divisor):
+    quotient = math.floor( dividen / divisor)
+    reminder = dividen - (divisor * quotient) 
+    return reminder
+
+print(compute_reminder(10,3))
+
