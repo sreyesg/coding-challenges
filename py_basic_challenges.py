@@ -141,5 +141,97 @@ def compute_reminder(dividen, divisor):
     reminder = dividen - (divisor * quotient) 
     return reminder
 
-print(compute_reminder(10,3))
+# print(compute_reminder(10,3))
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 06-range
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called ranging that accepts two integers as arguments and 
+  returns an array of integers starting with the first argument up to one 
+  less than the second argument.
+- The range function must be called with the first argument less than or equal 
+  to the second argument; otherwise, return the string "First argument must be 
+  less than second".
+
+Examples:
+
+range(1,4) //=> [1,2,3]
+range(-2, 3) //=> [-2,-1,0,1,2]
+range(1,1) //=> []
+range(5,2) //=> "First argument must be less than second"
+-----------------------------------------------------------------------------*/
+// Your solution for 06-range here:
+
+'''
+def ranging(num1, num2):
+    num_range = []
+    for i in range(num1, num2):
+        num_range.append(i)
+    if len(num_range) == 0:
+        return "First argument must be less than second"
+    return num_range
+
+# print(ranging(-2,6))
+
+'''
+
+/*-----------------------------------------------------------------------------
+Challenge: 07-reverseUpcaseString
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called reverseUpcaseString that accepts a single string 
+  argument.
+- The reverseUpcaseString function should return the string with its characters 
+  in reverse order and convert all characters to uppercase.
+
+Examples:
+
+reverseUpcaseString("SEI Rocks!") //=> "!SKCOR IES" 
+-----------------------------------------------------------------------------*/
+// Your solution for 07-reverseUpcaseString here:
+
+'''
+
+def reverse_up_case_string(str):
+    reverse_str = []
+    for i in list(str):
+        reverse_str.insert(0,i)
+    return ','.join(reverse_str).upper()
+
+# print(reverse_up_case_string('archile'))
+
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 08-removeEnds
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called removeEnds that accepts a single string argument, 
+  then returns a string with the first and last characters removed.
+- If the length of the string argument is less than 3, return an empty string.
+
+Examples:
+
+removeEnds('SEB Rocks!') //=> "EB Rocks"
+removeEnds('a') //=> "" (empty string)
+-----------------------------------------------------------------------------*/
+
+'''
+def remove_ends(string):
+    if len(string) < 3:
+        return ''
+    list_string = list(string)
+    sliced_str =  list_string[1:-1]
+    return ''.join(sliced_str)
+
+print(remove_ends('SEB Rocks!'))
 
