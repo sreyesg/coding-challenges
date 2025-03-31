@@ -233,5 +233,112 @@ def remove_ends(string):
     sliced_str =  list_string[1:-1]
     return ''.join(sliced_str)
 
-print(remove_ends('SEB Rocks!'))
+# print(remove_ends('SEB Rocks!'))
 
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 09-charCount
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function named charCount that accepts a single string argument and 
+  returns an object that represents the count of each character in the string.
+- The returned object should have keys representing the character with its 
+  value set to the number of times the character appears in the string argument.
+- Upper and lower case characters should be counted separately.
+- Space characters should be counted too.
+
+Examples:
+
+charCount('hello') 
+//=> { h: 1, e: 1, l: 2, o: 1 }
+
+charCount('Today is fantastic!') 
+//=> { 
+  T: 1, 
+  o: 1, 
+  d: 1, 
+  a: 3, 
+  y: 1, 
+  ' ': 2, 
+  i: 2, 
+  s: 2, 
+  f: 1, 
+  n: 1, 
+  t: 2, 
+  c: 1, 
+  '!': 1 
+}
+-----------------------------------------------------------------------------*/
+// Your solution for 09-charCount here:
+
+'''
+# define return object
+# create list from string
+# loop over list:
+    # If idx not in object add it as key
+    # Else add +1 to properti
+
+def char_count(str):
+    count_obj ={}
+    for i in list(str):
+        if i in count_obj:
+            count_obj[i] += 1
+        else:
+            count_obj[i] = 1
+    return count_obj
+
+# print(char_count("hello  Hello"))
+
+
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 10-formatWithPadding
+
+Difficulty: Basic
+
+Prompt:
+
+- Write a function called formatWithPadding that accepts three arguments:
+  - A numeric argument (an integer) representing the number to format.
+  - A string argument (a single character) representing the character used to 
+    "pad" the returned string to a minimum length.
+  - Another numeric argument (an integer) representing the length to pad
+    the returned string to.
+- The function should return the integer as a string, left padded to the 
+  length of the 3rd arg using the character provided in the 2nd arg.
+- If the length of the integer converted to a string is equal or greater than 
+  the 3rd argument, no padding is needed - just return the integer as a string.
+
+Examples:
+
+formatWithPadding(123, '0', 5) //=> "00123"
+formatWithPadding(42, '*', 10) //=> "********42"
+formatWithPadding(1234, '*', 3) //=> "1234"
+-----------------------------------------------------------------------------*/
+// Your solution for 10-formatWithPadding here:
+'''
+# 3 arguments,
+# arg1: int to format , arg2: char use to pad, arg3: lenght to pad the return string to
+# while return str is not arg3 value, insert padding character to the left
+def format_with_padding(number,char_pad,length):
+    try:
+        float(number)
+    except ValueError:
+        return "enter a valid number in at first argument"
+    try: 
+        float(length)
+    except ValueError:
+        return "Enter a valud number at the last argument"
+    
+    if len(str(number)) >= length:
+        return number
+    formatted_array = list(str(number))
+    while len(formatted_array) != length:
+        formatted_array.insert(0,char_pad)
+    
+    return ''.join(formatted_array)
+
+print(format_with_padding(123,'0',5))
