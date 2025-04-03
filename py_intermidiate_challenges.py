@@ -96,6 +96,63 @@ def hamming_distance(str1, str2):
         return rHumming()
     return rHumming()
 
-print(hamming_distance('12334','1a3as'))
+# print(hamming_distance('12334','1a3as'))
         
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 13-mumble
+
+Difficulty: Intermediate
+
+Prompt:
+
+- Write a function called mumble that accepts a single string argument.
+- The function should return a string that has each character repeated the 
+  number of times according to its position within the string arg. 
+  Additionally, each repeated section of characters should be separated by a 
+  hyphen (-).
+- Examples describe it best..
+
+Examples:
+
+mumble('X') //=> 'X'
+mumble('abc') //=> 'a-bb-ccc'
+mumble('121') //=> '1-22-111'
+mumble('!A 2') //=> '!-AA-   -2222'
+-----------------------------------------------------------------------------*/
+// Your solution for 13-mumble here:
+'''
+
+# recursive algorithm 
+# convert string to list
+# initiate index and mumble_sentence variable
+# if index == o append first index to mumble_sentence variable
+# if index > 0 grab index from str and multiply it by index value 
+#   NEXT, append results to mumble_sentence
+
+def mumble(str): 
+    sentence_arr = list(str)
+    index = 0
+    mumble_sentence = []
+    def r_mumble():
+        nonlocal sentence_arr, index, mumble_sentence
+        if index == len(sentence_arr):
+            return ''.join(mumble_sentence)
+        if index == 0:
+            mumble_sentence.append(sentence_arr[0])
+        if index > 0:
+            sub_array = sentence_arr[index] * (index+1)
+            mumble_sentence.append('-')
+            mumble_sentence.append(sub_array)
+        index += 1
+        return r_mumble()
+    return r_mumble()
+
+
+print(mumble('abcdef cadamana'))
+
+
+        
+
+
 
