@@ -149,10 +149,47 @@ def mumble(str):
     return r_mumble()
 
 
-print(mumble('abcdef cadamana'))
+# print(mumble('abcdef cadamana'))
 
+'''
+/*-----------------------------------------------------------------------------
+Challenge: 14-fromPairs
 
-        
+Difficulty: Intermediate
+
+Prompt:
+
+- Write a function named fromPairs that creates an object from an array 
+  containing nested arrays.
+- Each nested array will have two elements representing key/value pairs used 
+  to create key/value pairs in an object to be returned by the function.
+- If a key appears in multiple pairs, the rightmost pair should overwrite the 
+  previous entry in the object.
+
+Examples:
+
+fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) 
+//=> { a: 1, b: 2, c: 3 }
+
+fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) 
+//=> { name: "Sally", age: 24 }
+-----------------------------------------------------------------------------*/
+// Your solution for 14-fromPairs here:
+
+'''
+# initiate empty object named result_obj
+# iterate over array
+#   For each element grab index 0 and append to empty object as key
+#   For each element grab index 1 and append to empty object as value
+# return result object
+
+def from_pairs(arr):
+    result_obj = {}
+    for idx in arr:
+        result_obj[idx[0]] = idx[1]
+    return result_obj
+
+# print(from_pairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ]))
 
 
 
